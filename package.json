@@ -1,0 +1,29 @@
+{
+  "name": "academind-rest-api-practice",
+  "version": "1.0.0",
+  "description": "A Node.js RESTful API Tutorial Project",
+  "main": "index.js",
+  "scripts": {
+    "startDev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/randrerd/academind-rest-api-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/randrerd/academind-rest-api-practice/issues"
+  },
+  "homepage": "https://github.com/randrerd/academind-rest-api-practice#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.28",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
