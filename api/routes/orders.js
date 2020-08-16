@@ -10,7 +10,7 @@ const { response } = require('express');
 router.get('/', (req, res, next) => {
   Order.find()
     .select('-__v')
-    .populate('product')
+    .populate('product','-__v')
     .exec()
     .then((docs) => {
       if (docs.length) {
@@ -51,7 +51,7 @@ async function getProductInfo(id) {
 
 router.get('/:orderID', (req, res, next) => {
   Order.findById(req.params.orderID)
-    .populate('product')
+  .populate('product','-__v')
     .exec()
     .then((order) => {
       if (!order) {
