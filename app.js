@@ -9,19 +9,17 @@ const dotenvResult = dotenv.config();
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
 
-mongoose.connect(
-  process.env.STRING_URL,{
-      useNewUrlParser:true,
-      useUnifiedTopology:true
-  }
-);
-
+mongoose.connect(process.env.STRING_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use(cors());
+app.use('/uploads', express.static('./uploads'));
 
 //Routes for request handling
 app.use('/products', productRoutes);
