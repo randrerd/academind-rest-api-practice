@@ -8,6 +8,7 @@ const dotenvResult = dotenv.config();
 
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
+const userRoutes = require('./api/routes/users');
 
 mongoose.connect(process.env.STRING_URL, {
   useNewUrlParser: true,
@@ -24,6 +25,7 @@ app.use('/uploads', express.static('./uploads'));
 //Routes for request handling
 app.use('/products', productRoutes);
 app.use('/orders', orderRoutes);
+app.use('/users', userRoutes);
 
 app.use((req, res, next) => {
   const error = new Error('Not Found');
