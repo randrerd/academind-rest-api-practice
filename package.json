@@ -4,6 +4,7 @@
   "description": "A Node.js RESTful API Tutorial Project",
   "main": "index.js",
   "scripts": {
+    "start" : "node app.js",
     "startDev": "nodemon app.js"
   },
   "repository": {
